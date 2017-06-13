@@ -1,0 +1,8 @@
+node_modules
+.idea
+.tmp
+.xlsx
+.DS_Store
+reports/**/*
+www
+.tmp
