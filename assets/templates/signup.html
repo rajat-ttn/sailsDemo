@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="jumbotron text-center">
+
+        <h2 align="center">Signup</h2>
+        <br>
+        <form>
+            <label for="name">What's your name?</label>
+            <input name="name" type="text" ng-model="name"/>
+            <br/>
+
+            <label for="email">What's your email?</label>
+            <input name="email" type="text" ng-model="email"/>
+            <br/>
+
+            <label for="password">Choose a Password</label>
+            <input name="password" type="password" ng-model="password"/>
+            <br/>
+
+            <button type="button" class="btn btn-primary btn-lg" ng-click="signup(name, email,password)">Signup</button>
+        </form>
+    </div>
+</div>

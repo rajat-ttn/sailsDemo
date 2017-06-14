@@ -33,7 +33,10 @@ module.exports.policies = {
     logout:'sessionAuth'
   },
   TodoController:{
-    '*': 'sessionAuth'
+    '*': 'sessionAuth',
+    'getTodos':true,
+    'addTodo':true,
+    'removeTodo': true
   },
 
   '/todoList': 'sessionAuth',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="todoApp">
   <head>
     <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
 
@@ -29,10 +29,13 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <!--STYLES END-->
   </head>
 
   <body>
+
+  <div ng-view></div>
 
   <!-- Default home page -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
@@ -42,29 +45,25 @@
   </style>
   <script type="text/javascript">
     setTimeout(function sunrise () {
-      document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
+     // document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
     }, 0);
   </script>
 
-  <div class="default-page">
-    <div class="header">
-      <h1 id="main-title" class="container"><%= __('A brand new app.') %></h1>
-      <h3 class="container">You're looking at: <code><%= view.pathFromApp + '.' +view.ext %></code></h3>
-    </div>
-    <div class="main container clearfix">
 
 
-      <!--SCRIPTS-->
-      <script src="/js/dependencies/sails.io.js"></script>
-      <!--SCRIPTS END-->
+  <!--SCRIPTS-->
+  <script src="/js/dependencies/sails.io.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/services/LoginService.js"></script>
+  <script src="/js/services/TodoService.js"></script>
+  <!--SCRIPTS END-->
 
 
-      <%- body %>
-
-    </div>
-
-  </div>
-
+      <!--<%- body %>-->
 
     <!--
         Client-side Templates
@@ -88,7 +87,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+    <script type="text/javascript" src="/jst.js"></script>
     <!--TEMPLATES END-->
 
 

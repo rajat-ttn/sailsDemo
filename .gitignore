@@ -6,3 +6,4 @@ node_modules
 reports/**/*
 www
 .tmp
+assets/bower_components
