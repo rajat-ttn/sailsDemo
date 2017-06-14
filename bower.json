@@ -1,0 +1,20 @@
+{
+  "name": "sailsDemo",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "ttn"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rajat-ttn/sailsDemo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
