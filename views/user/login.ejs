@@ -1,13 +1,26 @@
-<h1>Login</h1>
-<form action="/login" method="post">
+<div>
+  <div class="container" ng-controller="TodoCtrl">
+    <div class="jumbotron">
+      <h2 align="center">Todo Application Login</h2>
+      <br>
+      <div id="todo-form" class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+            <div class="form-group">
+              <form action="/login" method="post">
 
-  <label for="email">Your email address?</label>
-  <input name="email" type="text"/>
-  <br/>
+                <label for="email">username</label>
+                <input name="email" type="text"/>
+                <br/>
 
-  <label for="password">Your safe word?</label>
-  <input name="password" type="password"/>
-  <br/>
+                <label for="password">password</label>
+                <input name="password" type="password"/>
+                <br/>
 
-  <input type="submit"/>
-</form>
+                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,20 +1,54 @@
-<h1>Todo App</h1>
-
-<% if (req.session.me) { %>
-<a href="/logout">Logout</a>
-<% } else { %>
-<a href="/login">Login</a> | <a href="/signup">Signup</a>
+<% if (!req.session.me) { %>
+<div>
+  <div class="container" ng-controller="TodoCtrl">
+    <div class="jumbotron">
+      <h2 align="center">Todo Application</h2>
+      <br>
+      <div id="todo-form" class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <a href="/login">Login</a> | <a href="/signup">Signup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <% } %>
 
+
 <% if (req.session.me) { %>
 
-<form action="/addTodo" method="post">
+<div>
+  <div class="container" ng-controller="TodoCtrl">
+    <a href="/logout" style="float: right;">Logout</a>
+    <div class="jumbotron">
+      <h2 align="center">Todo Application</h2>
+      <br>
+      <div id="todo-form" class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <form action="/addTodo" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control input-lg text-center" placeholder="Add Todo!" name="todo">
+              <br>
+              <button type="submit" class="btn btn-primary btn-lg">Add Todo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--<div id="todo-list" class="row">-->
+    <!--<div class="col-sm-4 col-sm-offset-4">-->
+    <!--<div class="checkbox" ng-repeat="todo in todos">-->
+    <!--<label>-->
+    <!--<input type="checkbox" ng-click="removeTodo(todo)">-->
+    <!--{{ todo.msg }}-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+  </div>
+</div>
 
-  <label for="todo">Your todo item?</label>
-  <input name="todo" type="text"/>
-  <br/>
-  <input type="submit"/>
-</form>
+<% } %>
 
 <script>
 
@@ -33,6 +67,3 @@ io.socket.on('todo', function (msg) {
 });
 
 </script>
-
-
-<% } %>
