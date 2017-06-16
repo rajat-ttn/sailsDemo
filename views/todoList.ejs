@@ -2,7 +2,7 @@
   <div class="container" ng-controller="TodoCtrl">
     <a href="/" style="float: right">back</a>
     <div class="jumbotron">
-      <h2 align="center">Todo Application TODO List</h2>
+      <h2 align="center"> <%= req.session.userName%>'s TODO List</h2>
       <br>
       <div id="todo-form" class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">

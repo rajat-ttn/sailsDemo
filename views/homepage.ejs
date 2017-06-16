@@ -21,7 +21,7 @@
   <div class="container" ng-controller="TodoCtrl">
     <a href="/logout" style="float: right;">Logout</a>
     <div class="jumbotron">
-      <h2 align="center">Todo Application</h2>
+      <h2 align="center">Todo Application - <%= req.session.userName%> </h2>
       <br>
       <div id="todo-form" class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
