@@ -17,7 +17,10 @@ module.exports = {
         return res.negotiate(err);
       }
 
+      sails.log.info('signing-up' + JSON.stringify(req.session,null,'\t'));
+
       req.session.me = user.id;
+      req.session.userName = user.name;
 
       if (req.wantsJSON) {
         return res.ok('Signup successful!');
@@ -52,6 +55,8 @@ module.exports = {
     })
   },
   logout : function(req,res){
+
+    sails.log.info('logging-out' + JSON.stringify(req.session,null,'\t'));
 
     req.session.me = null;
 
